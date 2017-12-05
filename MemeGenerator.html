@@ -1,0 +1,75 @@
+<head>
+
+<title>Quote Generator</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<style type="text/css">
+
+	body {
+		background: black;
+	}
+	
+</style>
+
+</head>
+
+<body>
+
+    <div class="container text-center">
+
+		<h2>Quote Generator</h2>
+		
+		<p id="Quote"></p>
+		
+        <button id="quoteButton" class="btn btn-warning">Generate</button>
+		
+        <script type="text/javascript">
+		
+			$(document).ready(function() {
+  
+				var one = ["one", "two", "three"];
+				
+				var two = ["two","one", "two", "three"];
+				
+				var three = ["three","one", "two", "three"];
+				
+				var four = ["four","one", "two", "three"];
+				
+				var five = ["five","one", "two", "three"];
+				
+				var six = ["six","one", "two", "three"];
+
+				var seven = ["seven","one", "two", "three"];
+				
+				var eight = ["eight","one", "two", "three"];
+				
+				var nine = ["nine","one", "two", "three"];
+				
+				var quoteArray = [one, two, three, four, five, six, seven, eight, nine];
+
+				function generateQuote() {
+				
+					var randomArray = quoteArray[Math.floor(Math.random() * quoteArray.length)];
+				
+					var randomQuote = randomArray[Math.floor(Math.random() * randomArray.length)];
+				
+						document.getElementById("Quote").innerHTML = randomQuote;
+				
+				}
+
+				document.getElementById("quoteButton").onclick = generateQuote;
+
+				generateQuote();
+			  
+				});
+		
+		</script>
+		
+    </div>
+	
+</body>
