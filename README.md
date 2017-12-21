@@ -1,2 +1,3 @@
 # QuoteGenerator
-random quote generator for project
+random quote generator using JS
+added completed project
