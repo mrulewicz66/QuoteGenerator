@@ -1,3 +1,2 @@
 # QuoteGenerator
-random quote generator using JS
-added completed project
+random quote generator with JS
