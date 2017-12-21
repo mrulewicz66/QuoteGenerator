@@ -1,0 +1,113 @@
+<html lang="en">
+	
+<head>
+
+	<meta property="og:title" content="Rick and Morty Quote Generator">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="You're..pieces of shit. I can prove it mathematically.">
+	<meta property="og:image" content="https://michael-rulewicz.com/Content/Projects/background.png">
+	<meta property="og:url" content="https://michael-rulewicz.com/Content/Projects/QuoteGenerator.html">
+
+	<title>Rick and Morty Quote Generator</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<style type="text/css">
+
+	body {
+		background-image: linear-gradient(
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0.1)
+		),
+		url('background.png');
+		background-size: cover;
+	}
+	
+	h2 {
+		color: white;
+		font-size: 70px;
+		margin-top: 30px;
+	}
+	
+	p {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		background: rgba(0, 0, 0, 0.75);
+	}
+	
+	#Quote {
+		color: white;
+		font-size: 35px;
+	}
+	
+	#quoteButton {
+		margin-bottom: 150px;
+	}
+	
+</style>
+
+</head>
+
+<body>
+
+    <div class="container text-center">
+
+		<h2>Rick and Morty Quotes</h2>
+		
+		<p id="Quote"></p>
+		
+        <button id="quoteButton" class="btn btn-lg btn-warning">Generate</button>
+		
+        <script type="text/javascript">
+		
+			$(document).ready(function() {
+  
+				var Rick = ['Rick - "Listen, Morty, I hate to break it to you but what people call \"love\" is just a chemical reaction that compels animals to breed. It hits hard, Morty, then it slowly fades, leaving you stranded in a failing marriage. I did it. Your parents are gonna do it. Break the cycle, Morty. Rise above. Focus on science."','Rick - "Weddings are basically funerals with cake."', 'Rick - "What about the reality where Hitler cured cancer, Morty? The answer is: Don\'t think about it."', 'Rick - "I\'ll tell you how I feel about school, Jerry: It\'s a waste of time. Bunch of people runnin\' around bumpin\' into each other, got a guy up front says \"2 + 2,\" and the people in the back say, \"4.\" Then the bell rings and they give you a carton of milk and a piece of paper that says you can go take a dump or somethin\'. I mean, it\'s not a place for smart people, Jerry. I know that\'s not a popular opinion, but that\'s my two cents on the issue."', 'Rick - "There is no God, Summer. Gotta rip that band-aid off now you\'ll thank me later."', 'Rick - "What, so everyone\'s supposed to sleep every night now? You realize that nighttime makes up half of all time?"', 'Rick - "Listen to me, Morty. I know that new situations can be intimidating. You\'re looking around and it\'s all scary and different. But you know, meeting them head on, charging right into them like a bull, that\'s how we grow as people."', 'Rick - "Let\'s get RIGGITY WRECKED!"', 'Rick - "That\'s planning for failure, Morty. Even dumber than regular planning."', 'Rick - "I\'M PICKLE RICK!!!"'];
+				
+				var Morty = ['Morty - "Nobody exists on purpose. Nobody belongs anywhere. We\'re all going to die. Come watch TV."','Morty - "I mean, why would a Pop-Tart want to live inside a toaster, Rick? I mean, that would be like the scariest place for them to live. You know what I mean?"', 'Morty - "You guys are the fucking worst! Your gods are a lie! Fuck you, fuck nature, and fuck the trees!', 'Morty - "Oh man, Rick! I\'m looking around this place and I\'m starting to work up some anxiety about this whole thing!"', 'Morty - "Well then get your shit together, get it all together and put it in a backpack, all your shit, so it\'s together. And if you gotta take it somewhere, take it somewhere, you know. Take it to the shit store and sell it, or put it in the shit museum. I don\'t care what you do, you just gotta get it together. Get your shit together."', 'Morty - "On one of our adventures, Rick and I basically destroyed the whole world, so we bailed on that reality and we came to this one, because in this one, the world wasn\'t destroyed, and in this one, we were dead. So we came here and we buried ourselves, and we took their place. And every morning, Summer, I eat breakfast 20 yards away from my own rotting corpse."'];
+				
+				var Summer = ['Summer - "You don\'t love people in hopes of a reward, dad. You love them unconditionally."','Summer - "Grandpa, I think that when you put your mind into this body\'s young brain, it did what young brains do. It shoved the bad thoughts into the back and put a large wall around them. But those bad thoughts are the real Rick. The fact that you\'re old, the fact that we\'re all going to die one day, the fact that the universe is so big, nothing in it matters\-those facts are who you are! So you\'re trapped in there and you can only come out in the form of Tiny Rick\'s teen angst!"', 'Summer - "Morty, no offence, but a drawing of me you made when you were eight isn\'t gonna make me feel like less of an accident!"'];
+				
+				var Jerry = ['Jerry - "That\'s right assholes. Take my penis. Take it all!"','Jerry - "Human music, I like it!"', 'Jerry - "Life is effort and I\'ll stop when I die."', 'Jerry - "You think you can control me with a haircut?"'];
+				
+				var Beth = ['Beth - "Are you saying Tommy survived here by having sex with Froopy creatures, creating Froopy-human hybrid offspring and then consuming their proteins, sustaining himself with an endless cycle of cannibalistic incest?"','Beth - "Your language has the word \"squanch\" in it a lot. Doesn\'t that become tedious and worn out like the Smurf thing?"'];
+				
+				var MrPoopybutthole = ['Mr.Poopybutthole - "I\'m sorry you didn\'t have any bad memories of me."', 'Mr.Poopybutthole - "OOOWEE!"'];
+				
+				var MrMeeseeks = ['Mr.Meeseeks - "I\'m Mr. Meeseeks, look at me!"'];
+				
+				var BlimBlam = [' Blim Blam - "Um, first of all, hello. Uh, my name is Blim Blam the Korblok. Second of all, cards on the table, I\'m a murderer that eats babies, and I came to this planet to eat babies. However, I am also carrying a highly infectious disease that I suppose you could call \"space AIDS\" as you put it, and Rick did chain me up so that he could attempt to cure it. At the same time, Rick\'s motivation to cure my disease was not to save my life or anyone else\'s, but to patent and sell the cure for billions of Blemflarcks. But you know the reason why I ripped my chains out of the wall? And do you know why I\'m never coming back to this planet?! BECAUSE THE TWO OF YOU ARE THE FUCKING WORST! You both hate yourselves AND each other! And the idea that it has ANYTHING to do with Rick is laughable. I\'d laugh but I\'m biologically incapable. That\'s how alien I am! And even I\'m sitting here listening to the two of you and being like, \"WHAT THE FUCK!?!\" So good luck with your shitty marriage, and tell Rick I\'m sorry he has to deal with EITHER of you. Blim Blam OUT."'];
+				
+				var Birdperson = ['Birdperson - "In bird culture, this is considered a dick move."'];
+				
+				var Therapist = ['Therapist - "Rick, the only connection between your unquestionable intelligence and the sickness destroying your family is that everyone in your family, you included, use intelligence to justify sickness. You seem to alternate between viewing your own mind as an unstoppable force and as an inescapable curse. And I think it\'s because the only truly unapproachable concept for you is that it\'s your mind within your control. You chose to come here, you chose to talk, to belittle my vocation, just as you chose to become a pickle. You are the master of your universe. And yet you are dripping with rat blood and feces, your enourmous mind literally vegetating by your own hand. I have no doubt that you would be bored senseless by thereapy, the same way I\'m bored when I brush my teeth and wipe my ass. Because the thing about repairing, maintaining, and cleaning is, it\'s not an adventure. There\'s no way to do it so wrong you might die. It\'s just work. And the bottom line is some people are okay going to work and some people, well, some people would rather die. Each of us gets to choose."']
+				
+				var quoteArray = [Rick, Morty, Summer, Jerry, Beth, MrPoopybutthole, MrMeeseeks, BlimBlam, Birdperson, Therapist];
+
+				function generateQuote() {
+				
+					var randomArray = quoteArray[Math.floor(Math.random() * quoteArray.length)];
+				
+					var randomQuote = randomArray[Math.floor(Math.random() * randomArray.length)];
+				
+						document.getElementById("Quote").innerHTML = randomQuote;
+				
+				}
+
+				document.getElementById("quoteButton").onclick = generateQuote;
+
+				generateQuote();
+			  
+				});
+		
+		</script>
+		
+    </div>
+	
+</body>
+
+</html>
